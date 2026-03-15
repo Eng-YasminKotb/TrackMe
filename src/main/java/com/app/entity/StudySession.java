@@ -28,6 +28,9 @@ public class StudySession {
     @Column(name = "productivity_score")
     private int productivityScore;
 
+    @Column(name = "focus_score")
+    private int focusScore;
+
     @Column(name = "achievement")
     private String achievement;
 
