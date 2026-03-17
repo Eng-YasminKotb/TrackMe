@@ -43,7 +43,13 @@ public class StudySessionController {
     @GetMapping(value = "/showDailyStats")
     public String showDailyStats(Model model){
         List<StudySession> sessions = studySessionService.findAll();
-        model.addAttribute("sessions", sessions);
+        java.sql.Date today = new java.sql.Date(System.currentTimeMillis());
+
+        List<StudySession> todaySessions = sessions.stream()
+                .filter(s -> s.getDate().equals(today))
+                .toList();
+
+        model.addAttribute("sessions", todaySessions);
         return "showDailyStats";
     }
 
