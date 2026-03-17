@@ -53,6 +53,13 @@ public class StudySessionController {
         return "showDailyStats";
     }
 
+    @GetMapping("/allSessions")
+    public String showAllSessions(Model model){
+        List<StudySession> sessions = studySessionService.findAll();
+        model.addAttribute("sessions", sessions);
+        return "showDailyStats";
+    }
+
 
 
 }

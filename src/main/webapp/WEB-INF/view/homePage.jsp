@@ -28,6 +28,11 @@
             <a href="${pageContext.request.contextPath}/chooseMonth" class="btn btn-red">View</a>
         </div>
 
+        <div class="menu-item">
+            <span class="menu-label">All Sessions</span>
+            <a href="${pageContext.request.contextPath}/allSessions" class="btn btn-blue">View</a>
+        </div>
+
     </div>
 
 </body>
