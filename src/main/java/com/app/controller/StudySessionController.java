@@ -24,7 +24,6 @@ public class StudySessionController {
         return "homePage";
     }
 
-    @Transactional
     @GetMapping("/addSession")
     public String showAddSessionForm(Model model){
         model.addAttribute("studySession", new StudySession());
