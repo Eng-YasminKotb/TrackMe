@@ -31,7 +31,7 @@
                     <c:forEach var="s" items="${sessions}">
                         <c:set var="totalMins" value="${totalMins + s.durationMinutes}"/>
                     </c:forEach>
-                    <div class="summary-value">${totalMins} min</div>
+                    <div class="summary-value">${totalMins} min (${totalMins / 60}h)</div>
                     <div class="summary-label">Total Time</div>
                 </div>
                 <div class="summary-box">

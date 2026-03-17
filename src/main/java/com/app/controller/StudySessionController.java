@@ -33,19 +33,20 @@ public class StudySessionController {
 
     @PostMapping(value = "/addSession")
     public String addDailyStudySession(StudySession studySession, Model model){
+        studySession.setDate(new java.sql.Date(System.currentTimeMillis()));
         studySessionService.save(studySession);
         model.addAttribute("studySession", studySession);
-        model.addAttribute("submitted", false);
+        model.addAttribute("submitted", true);
         return "addSession";
     }
 
     @GetMapping(value = "/showDailyStats")
     public String showDailyStats(Model model){
         List<StudySession> sessions = studySessionService.findAll();
-        java.sql.Date today = new java.sql.Date(System.currentTimeMillis());
 
+        java.time.LocalDate localToday = java.time.LocalDate.now();
         List<StudySession> todaySessions = sessions.stream()
-                .filter(s -> s.getDate().equals(today))
+                .filter(s -> s.getDate().toLocalDate().equals(localToday))
                 .toList();
 
         model.addAttribute("sessions", todaySessions);
