@@ -61,7 +61,7 @@
 
             <div class="form-group">
                 <label>Achievement</label>
-                <form:input path="achievement" type="text" readonly="${submitted}" placeholder="What did you achieve?"/>
+                <form:input path="achievement" type="text"  placeholder="What did you achieve?" readonly="${submitted}"/>
             </div>
 
             <div class="btn-row">
@@ -71,7 +71,17 @@
             </div>
 
         </form:form>
+     <c:if test="${submitted}">
+         <div style="color:green; font-weight:bold; margin-top:15px; text-align:center;">
+             Submitted successfully!
+         </div>
 
+         <div style="text-align:center; margin-top:10px;">
+             <a href="${pageContext.request.contextPath}/addSession" class="btn btn-green">
+                 Add Another Session
+             </a>
+         </div>
+     </c:if>
     </div>
 
 </body>
