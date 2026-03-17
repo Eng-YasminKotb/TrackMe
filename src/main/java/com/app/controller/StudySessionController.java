@@ -36,7 +36,7 @@ public class StudySessionController {
     public String addDailyStudySession(StudySession studySession, Model model){
         studySessionService.save(studySession);
         model.addAttribute("studySession", studySession);
-        model.addAttribute("submitted", true);
+        model.addAttribute("submitted", false);
         return "addSession";
     }
 
