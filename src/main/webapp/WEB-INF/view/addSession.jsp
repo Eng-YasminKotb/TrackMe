@@ -37,6 +37,8 @@
                         <form:input path="durationMinutes" type="number" min="1" placeholder="e.g. 90"/>
                     </div>
 
+                   <!--Focus Score Drop Down-->
+
                     <div class="form-group">
                         <label>Focus Score (1–5)</label>
                         <form:select path="focusScore">
