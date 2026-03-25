@@ -21,17 +21,16 @@
                            method="post"
                            modelAttribute="studySession">
 
+
+
+                    <!--Study Area Text Area-->
+
                     <div class="form-group">
-                        <label>Study Area</label>
-                        <form:select path="studyArea">
-                            <form:option value=""               label="-- Select --"/>
-                            <form:option value="Backend"        label="Backend"/>
-                            <form:option value="Problem Solving" label="Problem Solving"/>
-                            <form:option value="Open-source"    label="Open-source"/>
-                            <form:option value="English"        label="English"/>
-                            <form:option value="Reading"        label="Reading"/>
-                        </form:select>
+                         <label>Study Area</label>
+                         <form:input path="studyArea" type="text" placeholder="What did you study?"/>
                     </div>
+
+                    <!--Duration Text Area-->
 
                     <div class="form-group">
                         <label>Duration (minutes)</label>
