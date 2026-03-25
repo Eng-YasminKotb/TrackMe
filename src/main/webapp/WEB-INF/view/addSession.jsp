@@ -51,6 +51,8 @@
                         </form:select>
                     </div>
 
+                    <!--Productivity Score Drop Down-->
+
                     <div class="form-group">
                         <label>Productivity Score (1–5)</label>
                         <form:select path="productivityScore">
@@ -62,6 +64,10 @@
                             <form:option value="5" label="5 — Very High"/>
                         </form:select>
                     </div>
+
+
+                    <!--Achievement Drop Down-->
+
 
                     <div class="form-group">
                         <label>Achievement</label>
@@ -76,6 +82,7 @@
 
                 </form:form>
             </c:when>
+
             <c:otherwise>
                 <div class="form-group">
                     <label>Study Area</label>
@@ -83,7 +90,7 @@
                 </div>
                 <div class="form-group">
                     <label>Duration</label>
-                    <div class="readonly-field">${studySession.durationMinutes} min</div>
+                    <div class="readonly-field">${studySession.durationMinutes} mins (${studySession.durationMinutes/60}) hrs</div>
                 </div>
                 <div class="form-group">
                     <label>Focus Score</label>
