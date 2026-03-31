@@ -5,6 +5,8 @@ A full-stack web app I built and use daily to track the
 
 > "3 hours of focused work is worth more than 6 hours of distracted work."
 
+![Daily Study Chart]([https://github.com/your-username/TrackMe/blob/main/images/daily-study-chart.png](https://github.com/Eng-YasminKotb/TrackMe/blob/main/src/main/webapp/resources/image/img.png)?raw=true)
+
 ## What It Does
 - Log study sessions with duration, focus score, productivity score, and achievement
 - Calculates a combined quality score per session
